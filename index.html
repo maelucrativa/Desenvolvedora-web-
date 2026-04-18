@@ -1,490 +1,96 @@
+
 <!DOCTYPE html><html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Débora Rodrigues de Souza | Marketing, Design e Soluções Digitais</title>
-  <meta name="description" content="Site institucional de Débora Rodrigues de Souza. Design gráfico, marketing digital, websites, produtos digitais e soluções criativas com elegância, estratégia e presença profissional." />
-  <meta name="theme-color" content="#08111f" />
-  <style>
-    :root {
-      --bg: #05080f;
-      --bg-soft: #0a1220;
-      --primary: #0f2747;
-      --primary-2: #163b6d;
-      --accent: #2d5ea8;
-      --accent-soft: #7aa6e6;
-      --text: #ecf3ff;
-      --muted: #b5c3db;
-      --gold-soft: #d8c18f;
-      --shadow: 0 25px 60px rgba(0,0,0,.45);
-      --radius-xl: 28px;
-      --max: 1180px;
-    }* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(45,94,168,.22), transparent 32%),
-    radial-gradient(circle at 85% 10%, rgba(122,166,230,.12), transparent 22%),
-    linear-gradient(180deg, #04070d 0%, #08101b 45%, #05080f 100%);
-  color: var(--text);
-  line-height: 1.6;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Débora Rodrigues de Souza | Alto Padrão</title>
+<style>
+:root{
+--bg:#02040a;
+--primary:#071a33;
+--accent:#0a2a55;
+--accent-strong:#123d7a;
+--text:#eef4ff;
+--muted:#9fb3d1;
 }
-
-a { color: inherit; text-decoration: none; }
-img { max-width: 100%; display: block; }
-
-.container {
-  width: min(calc(100% - 32px), var(--max));
-  margin: 0 auto;
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:linear-gradient(180deg,#01030a,#02060f);
+color:var(--text);
 }
-
-.topbar {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  backdrop-filter: blur(14px);
-  background: rgba(4, 8, 15, 0.72);
-  border-bottom: 1px solid rgba(255,255,255,.06);
+.container{max-width:1100px;margin:auto;padding:20px}
+h1{font-size:48px;line-height:1.1}
+.cta{
+background:linear-gradient(135deg,#0a2a55,#123d7a);
+padding:15px 25px;
+border-radius:30px;
+color:#fff;
+display:inline-block;
+margin-top:20px;
+font-weight:bold;
 }
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 18px 0;
-  flex-wrap: wrap;
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:30px;
+padding:60px 0;
 }
-
-.brand {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+img{width:100%;border-radius:20px}
+.section{padding:60px 0}
+.card{
+background:#050c18;
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.05);
 }
-
-.brand strong {
-  font-size: 1rem;
-  letter-spacing: .04em;
-  text-transform: uppercase;
+footer{
+border-top:1px solid rgba(255,255,255,0.1);
+padding:30px;
+text-align:center;
+color:var(--muted);
 }
-
-.brand span {
-  font-size: .84rem;
-  color: var(--muted);
+@media(max-width:800px){
+.hero{grid-template-columns:1fr}
 }
-
-.nav-links {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.nav-links a {
-  color: var(--muted);
-  font-size: .95rem;
-  transition: .25s ease;
-}
-
-.nav-links a:hover { color: var(--text); }
-
-.cta, .cta-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  border-radius: 999px;
-  padding: 14px 24px;
-  font-weight: 700;
-  letter-spacing: .01em;
-  transition: transform .2s ease, box-shadow .25s ease, background .25s ease;
-}
-
-.cta {
-  background: linear-gradient(135deg, var(--accent), var(--primary-2));
-  color: white;
-  box-shadow: 0 12px 30px rgba(26, 58, 104, .45);
-}
-
-.cta:hover, .cta-secondary:hover { transform: translateY(-1px); }
-
-.cta-secondary {
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.02);
-  color: var(--text);
-}
-
-.hero { padding: 78px 0 36px; }
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap: 34px;
-  align-items: center;
-}
-
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 14px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.08);
-  color: var(--accent-soft);
-  font-size: .88rem;
-  margin-bottom: 18px;
-}
-
-h1 {
-  margin: 0 0 18px;
-  font-size: clamp(2.4rem, 5vw, 4.6rem);
-  line-height: 1.05;
-  letter-spacing: -0.04em;
-}
-
-.gradient-text {
-  background: linear-gradient(135deg, #ffffff 20%, #97beff 55%, #d8c18f 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-}
-
-.hero p {
-  font-size: 1.08rem;
-  color: var(--muted);
-  max-width: 700px;
-  margin: 0 0 28px;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 26px;
-}
-
-.hero-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.hero-badges span {
-  border: 1px solid rgba(255,255,255,.08);
-  background: rgba(255,255,255,.03);
-  padding: 10px 14px;
-  border-radius: 999px;
-  color: #dbe7fb;
-  font-size: .92rem;
-}
-
-.hero-card, .info-card, .service-card, .legal-card, .contact-panel {
-  background: linear-gradient(180deg, rgba(14,26,45,.92), rgba(7,12,22,.96));
-  border: 1px solid rgba(255,255,255,.06);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow);
-}
-
-.hero-card {
-  padding: 22px;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-main-image,
-.about-image {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 22px;
-  border: 1px solid rgba(255,255,255,.08);
-  background: #0b1525;
-}
-
-.hero-main-image {
-  aspect-ratio: 4 / 5;
-  margin-bottom: 18px;
-}
-
-.about-image {
-  aspect-ratio: 5 / 4;
-  min-height: 320px;
-}
-
-.contact-box {
-  padding: 16px;
-  border-radius: 20px;
-  background: rgba(255,255,255,.03);
-  border: 1px solid rgba(255,255,255,.06);
-}
-
-.contact-list {
-  display: grid;
-  gap: 8px;
-  color: var(--muted);
-  font-size: .96rem;
-}
-
-section { padding: 38px 0; }
-.section-title { margin-bottom: 18px; }
-
-.section-title .mini {
-  color: var(--accent-soft);
-  font-size: .88rem;
-  text-transform: uppercase;
-  letter-spacing: .16em;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.section-title h2 {
-  margin: 0;
-  font-size: clamp(1.8rem, 3vw, 3rem);
-  letter-spacing: -0.03em;
-}
-
-.section-title p {
-  color: var(--muted);
-  max-width: 760px;
-  margin: 12px 0 0;
-}
-
-.grid-2, .grid-3 {
-  display: grid;
-  gap: 22px;
-}
-
-.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-
-.info-card, .service-card, .legal-card, .contact-panel {
-  padding: 26px;
-}
-
-.service-card ul, .legal-card ul {
-  padding-left: 18px;
-  margin: 14px 0 0;
-}
-
-.about-wrap {
-  display: grid;
-  grid-template-columns: .95fr 1.05fr;
-  gap: 28px;
-  align-items: center;
-}
-
-.contact-panel {
-  display: grid;
-  gap: 16px;
-}
-
-.contact-item {
-  padding: 14px 16px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,.07);
-  background: rgba(255,255,255,.03);
-}
-
-.footer {
-  padding: 36px 0 60px;
-  color: var(--muted);
-  border-top: 1px solid rgba(255,255,255,.06);
-  margin-top: 26px;
-}
-
-.footer-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.small-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-
-.highlight {
-  color: var(--gold-soft);
-  font-weight: 600;
-}
-
-@media (max-width: 980px) {
-  .hero-grid,
-  .about-wrap,
-  .grid-2,
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 640px) {
-  .cta, .cta-secondary { width: 100%; }
-  .hero-actions { flex-direction: column; }
-}
-
-  </style>
+</style>
 </head>
-<body>
-  <header class="topbar">
-    <div class="container nav">
-      <a href="#inicio" class="brand">
-        <strong>Débora Rodrigues de Souza</strong>
-        <span>Marketing, Design e Soluções Digitais</span>
-      </a>
-      <nav class="nav-links">
-        <a href="#inicio">Início</a>
-        <a href="#quem-sou">Quem sou</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#contato">Contato</a>
-        <a href="#termos">Termos</a>
-      </nav>
-    </div>
-  </header>  <main>
-    <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">Presença digital sofisticada, estratégica e memorável</div>
-          <h1>Transformo ideias em <span class="gradient-text">presença, autoridade e resultado</span> no digital.</h1>
-          <p>
-            Sou <strong>Débora Rodrigues de Souza</strong>, uma profissional criativa com trajetória internacional, experiência construída desde muito nova em Portugal e atuação voltada a design gráfico, marketing digital, websites, identidade visual e criação de produtos digitais com posicionamento de alto nível.
-          </p>
-          <div class="hero-actions">
-            <a class="cta" href="https://wa.me/5511912128573?text=Olá%20Débora%2C%20vim%20pelo%20seu%20site%20e%20quero%20saber%20mais." target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
-            <a class="cta-secondary" href="#quem-sou">Conhecer meu trabalho</a>
-          </div>
-          <div class="hero-badges">
-            <span>Design gráfico</span>
-            <span>Marketing digital</span>
-            <span>Websites elegantes</span>
-            <span>Produtos digitais</span>
-          </div>
-        </div><aside class="hero-card">
-      <img class="hero-main-image" src="09e5cd9e308a62496a8700b2f0be10a7.jpg" alt="Imagem principal de apresentação de Débora Rodrigues de Souza" />
-      <div class="contact-box">
-        <h3>Contato direto</h3>
-        <div class="contact-list">
-          <span><strong>WhatsApp:</strong> +55 11 91212-8573</span>
-          <span><strong>E-mail:</strong> mundofemininomarketing@gmail.com</span>
-          <span><strong>Google Business:</strong> Google Business em configuração</span>
-        </div>
-      </div>
-    </aside>
-  </div>
-</section>
-
-<section id="quem-sou">
-  <div class="container">
-    <div class="section-title">
-      <span class="mini">Quem sou eu</span>
-      <h2>Uma trajetória criativa construída com visão, dedicação e sofisticação.</h2>
-      <p>
-        Minha história começou cedo, com uma paixão genuína por comunicação visual, estratégia e presença digital. Em Portugal, desde muito nova, desenvolvi sensibilidade estética, disciplina criativa e um olhar apurado para transformar ideias em projetos que comunicam valor, confiança e personalidade.
-      </p>
-    </div>
-
-    <div class="about-wrap">
-      <div>
-        <img class="about-image" src="https://experimental-chocolate-cgyigf9ewf.edgeone.app/6848796da6419063a381ee97bbc95e9d.jpg" alt="Mulher com computador representando o trabalho digital e criativo de Débora" />
-      </div>
-
-      <div class="info-card">
-        <h3>O que eu desenvolvo</h3>
-        <p>
-          Atuo com soluções que unem <span class="highlight">beleza, estratégia e conversão</span>. Meu objetivo é criar experiências digitais que elevam a imagem profissional de marcas, negócios e projetos pessoais com um acabamento premium.
-        </p>
-        <ul>
-          <li>Criação e desenvolvimento de websites elegantes e funcionais</li>
-          <li>Design gráfico para posicionamento visual de alto padrão</li>
-          <li>Marketing digital com foco em presença, alcance e autoridade</li>
-          <li>Criação de e-books e produtos digitais com identidade profissional</li>
-          <li>Materiais visuais para divulgação, apresentação e vendas</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="servicos">
-  <div class="container">
-    <div class="section-title">
-      <span class="mini">Serviços</span>
-      <h2>Soluções pensadas para destacar sua marca no ambiente digital.</h2>
-      <p>
-        Cada projeto é desenvolvido com atenção aos detalhes, identidade visual refinada e foco em transmitir profissionalismo, credibilidade e impacto.
-      </p>
-    </div>
-
-    <div class="grid-3">
-      <article class="service-card"><h3>Design Gráfico</h3><p>Criação de peças visuais sofisticadas para fortalecer a imagem da sua marca e causar uma impressão marcante.</p></article>
-      <article class="service-card"><h3>Marketing Digital</h3><p>Estratégias de comunicação e posicionamento para ampliar sua presença online com clareza, valor e persuasão.</p></article>
-      <article class="service-card"><h3>Websites</h3><p>Sites elegantes, modernos e responsivos, pensados para apresentar seu negócio com alto padrão estético e funcional.</p></article>
-      <article class="service-card"><h3>Produtos Digitais</h3><p>Desenvolvimento de e-books, materiais digitais e conteúdos estruturados com acabamento profissional e identidade visual coerente.</p></article>
-      <article class="service-card"><h3>Identidade e Posicionamento</h3><p>Construção de presença visual e narrativa para comunicar autoridade, confiança e diferenciação no mercado.</p></article>
-      <article class="service-card"><h3>Projetos Personalizados</h3><p>Soluções criativas sob medida para quem deseja algo exclusivo, convincente e realmente memorável.</p></article>
-    </div>
-  </div>
-</section>
-
-<section id="contato">
-  <div class="container grid-2">
-    <div class="contact-panel">
-      <h3>Vamos criar algo extraordinário?</h3>
-      <p>Se você busca uma presença digital elegante, profissional e feita com atenção aos mínimos detalhes, fale comigo diretamente e vamos transformar sua ideia em um projeto de alto impacto.</p>
-      <a class="cta" href="https://wa.me/5511912128573?text=Olá%20Débora%2C%20quero%20falar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
-    </div>
-
-    <div class="contact-panel">
-      <div class="contact-item"><strong>Telefone / WhatsApp</strong><span>+55 11 91212-8573</span></div>
-      <div class="contact-item"><strong>E-mail</strong><span>mundofemininomarketing@gmail.com</span></div>
-      <div class="contact-item"><strong>Google Business</strong><span>Google Business em configuração</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="termos">
-  <div class="container grid-2">
-    <article class="legal-card" id="termos-de-uso">
-      <h3>Termos de Uso</h3>
-      <p>Ao utilizar este site, você concorda em acessar as informações aqui disponibilizadas de forma lícita, ética e respeitosa.</p>
-      <ul>
-        <li>O conteúdo tem caráter informativo e institucional.</li>
-        <li>É proibido reproduzir ou utilizar os materiais sem autorização prévia, quando aplicável.</li>
-        <li>As informações sobre serviços podem ser atualizadas, alteradas ou removidas a qualquer momento, sem aviso prévio.</li>
-        <li>O envio de contato não garante contratação automática, sendo cada proposta analisada individualmente.</li>
-      </ul>
-    </article>
-
-    <article class="legal-card" id="politica-de-privacidade">
-      <h3>Política de Privacidade</h3>
-      <p>A sua privacidade é importante. Este site busca respeitar a confidencialidade dos dados informados por visitantes e potenciais clientes.</p>
-      <ul>
-        <li>Os dados enviados por formulários, e-mail ou WhatsApp serão utilizados apenas para comunicação, atendimento e apresentação de propostas.</li>
-        <li>As informações não serão vendidas ou compartilhadas indevidamente com terceiros.</li>
-        <li>Medidas razoáveis são adotadas para proteger os dados fornecidos.</li>
-        <li>Ao entrar em contato, você concorda com o tratamento das informações para fins de atendimento e relacionamento profissional.</li>
-      </ul>
-    </article>
-  </div>
-</section>
-
-  </main>  <footer class="footer">
-    <div class="container footer-row">
-      <div>
-        <strong>Débora Rodrigues de Souza</strong><br />
-        <span>Marketing, Design, Websites e Produtos Digitais</span>
-      </div>
-      <div class="small-links">
-        <a href="#termos-de-uso">Termos de Uso</a>
-        <a href="#politica-de-privacidade">Política de Privacidade</a>
-        <a href="#contato">Contato</a>
-      </div>
-    </div>
-  </footer>
-</body>
-      </html>
+<body><div class="container hero">
+<div>
+<h1>Transformo ideias em presença, autoridade e resultado no digital.</h1>
+<p>Sou Débora Rodrigues de Souza, especialista em design gráfico, marketing digital e criação de produtos digitais com experiência internacional desde muito jovem em Portugal.</p>
+<a class="cta" href="https://wa.me/5511912128573" target="_blank">Falar no WhatsApp</a>
+</div><div>
+<img src="https://experimental-chocolate-cgyigf9ewf.edgeone.app/6848796da6419063a381ee97bbc95e9d.jpg" alt="Imagem principal" />
+</div>
+</div><div class="container section">
+<h2>Quem sou eu</h2>
+<div class="card">
+<img src="https://experimental-chocolate-cgyigf9ewf.edgeone.app/6848796da6419063a381ee97bbc95e9d.jpg" alt="Quem sou eu" />
+<p>Minha trajetória começou cedo em Portugal, desenvolvendo habilidades em design, marketing e presença digital. Hoje, crio soluções elegantes e estratégicas para marcas que desejam se posicionar com alto padrão.</p>
+</div>
+</div><div class="container section">
+<h2>Serviços</h2>
+<div class="card">
+<p>• Design gráfico premium<br>
+• Marketing digital estratégico<br>
+• Criação de websites modernos<br>
+• Produtos digitais e e-books</p>
+</div>
+</div><div class="container section">
+<h2>Contato</h2>
+<div class="card">
+<p><strong>WhatsApp:</strong> +55 11 91212-8573<br>
+<strong>Email:</strong> mundofemininomarketing@gmail.com</p>
+<a class="cta" href="https://wa.me/5511912128573" target="_blank">Chamar no WhatsApp</a>
+</div>
+</div><div class="container section">
+<h2>Termos e Privacidade</h2>
+<div class="card">
+<p>Este site respeita sua privacidade e utiliza dados apenas para contato profissional.</p>
+</div>
+</div><footer>
+Débora Rodrigues de Souza - Todos os direitos reservados
+</footer></body>
+</html>
